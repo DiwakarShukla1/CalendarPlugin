@@ -21,6 +21,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Calendar.java" target-dir="src/org/devgirl/calendar" />      
+        <source-file src="src/android/Calendar.java" target-dir="src/org/devgirl/calendar" />  
+        <source-file src="src/android/LocationUpdateService.java" target-dir="src/org/devgirl/calendar" />      
      </platform>          
 </plugin>
