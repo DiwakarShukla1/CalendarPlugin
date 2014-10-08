@@ -33,6 +33,18 @@ public class LocationUpdateService extends Service implements LocationListener {
 	        Log.i(TAG, "OnBind" + intent);
 	        return null;
 	    }
+	    
+	 @Override
+	 public void onProviderDisabled(String provider) {
+	        // TODO Auto-generated method stub
+	        Log.d(TAG, "- onProviderDisabled: " + provider);
+	    }
+	    
+	  @Override
+	    public void onProviderEnabled(String provider) {
+	        // TODO Auto-generated method stub
+	        Log.d(TAG, "- onProviderEnabled: " + provider);
+	    }
 
 	@Override
     	public void onCreate() {
