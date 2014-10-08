@@ -6,6 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.IBinder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,9 +23,17 @@ import org.apache.http.message.BasicNameValuePair;
 
 public class LocationUpdateService extends Service implements LocationListener {
 	private  LocationManager locationManager;
+	private static final String TAG = "LocationUpdateService";
+
+	 @Override
+	    public IBinder onBind(Intent intent) {
+	        // TODO Auto-generated method stub
+	        Log.i(TAG, "OnBind" + intent);
+	        return null;
+	    }
 
 	@Override
-    public void onCreate() {
+    	public void onCreate() {
         //Setting Time......
 
         super.onCreate();
