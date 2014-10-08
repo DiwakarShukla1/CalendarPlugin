@@ -45,6 +45,12 @@ public class LocationUpdateService extends Service implements LocationListener {
 	        // TODO Auto-generated method stub
 	        Log.d(TAG, "- onProviderEnabled: " + provider);
 	    }
+	    
+	    @Override
+	    public void onStatusChanged(String provider, int status, Bundle extras) {
+	        // TODO Auto-generated method stub
+	        Log.d(TAG, "- onStatusChanged: " + provider + ", status: " + status);
+	    }
 
 	@Override
     	public void onCreate() {
