@@ -54,7 +54,7 @@ public class LocationUpdateService extends Service implements LocationListener {
 	    
 	@Override    
 	public void onLocationChanged(Location location) {
-        	Log.d(TAG, "- onLocationChanged: " + location.getLatitude() + "," + location.getLongitude() + ", accuracy: " + location.getAccuracy() + ", isMoving: " + isMoving + ", speed: " + location.getSpeed());
+        	Log.d(TAG, "- onLocationChanged: " + location.getLatitude() + "," + location.getLongitude() + ", accuracy: " + location.getAccuracy()  + ", speed: " + location.getSpeed());
 	}
 
 	@Override
