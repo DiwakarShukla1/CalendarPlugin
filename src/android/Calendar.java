@@ -25,7 +25,7 @@ public class Calendar extends CordovaPlugin {
                 //     .putExtra("description", arg_object.getString("description"))
                 //     .putExtra("eventLocation", arg_object.getString("eventLocation"));
              
-               this.cordova.getActivity().startActivity(calIntent);
+               // this.cordova.getActivity().startActivity(calIntent);
                callbackContext.success("Diwakar");
                return true;
             }
