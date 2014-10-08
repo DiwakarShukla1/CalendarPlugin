@@ -55,6 +55,24 @@ public class LocationUpdateService extends Service implements LocationListener {
 	@Override    
 	public void onLocationChanged(Location location) {
         	Log.d(TAG, "- onLocationChanged: " + location.getLatitude() + "," + location.getLongitude() + ", accuracy: " + location.getAccuracy()  + ", speed: " + location.getSpeed());
+        	 HttpClient httpclient = new DefaultHttpClient();
+           HttpPost httppost = new HttpPost("http://192.168.0.109:8099/postLoc");
+       
+           try {
+               // Add your data
+               List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+               nameValuePairs.add(new BasicNameValuePair("id", "12345"));
+               nameValuePairs.add(new BasicNameValuePair("stringdata", "AndDev is Cool!"));
+               httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+       
+               // Execute HTTP Post Request
+               HttpResponse response = httpclient.execute(httppost);
+               
+           } catch (ClientProtocolException e) {
+               // TODO Auto-generated catch block
+           } catch (IOException e) {
+               // TODO Auto-generated catch block
+           }
 	}
 
 	@Override
