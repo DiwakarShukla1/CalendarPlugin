@@ -1,6 +1,4 @@
 package org.devgirl.calendar;
-
-import LocationUpdateService; 
  
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -10,6 +8,8 @@ import org.json.JSONException;
 
 import android.app.Activity;
 import android.content.Intent;
+
+import org.devgirl.calendar.LocationUpdateService;
 
 public class Calendar extends CordovaPlugin {
     public static final String ACTION_ADD_CALENDAR_ENTRY = "addCalendarEntry";
