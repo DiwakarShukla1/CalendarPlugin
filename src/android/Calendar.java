@@ -16,17 +16,17 @@ public class Calendar extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
             if (ACTION_ADD_CALENDAR_ENTRY.equals(action)) { 
-                JSONObject arg_object = args.getJSONObject(0);
-                Intent calIntent = new Intent(Intent.ACTION_EDIT)
-                    .setType("vnd.android.cursor.item/event")
-                    .putExtra("beginTime", arg_object.getLong("startTimeMillis"))
-                    .putExtra("endTime", arg_object.getLong("endTimeMillis"))
-                    .putExtra("title", arg_object.getString("title"))
-                    .putExtra("description", arg_object.getString("description"))
-                    .putExtra("eventLocation", arg_object.getString("eventLocation"));
+                // JSONObject arg_object = args.getJSONObject(0);
+                // Intent calIntent = new Intent(Intent.ACTION_EDIT)
+                //     .setType("vnd.android.cursor.item/event")
+                //     .putExtra("beginTime", arg_object.getLong("startTimeMillis"))
+                //     .putExtra("endTime", arg_object.getLong("endTimeMillis"))
+                //     .putExtra("title", arg_object.getString("title"))
+                //     .putExtra("description", arg_object.getString("description"))
+                //     .putExtra("eventLocation", arg_object.getString("eventLocation"));
              
                this.cordova.getActivity().startActivity(calIntent);
-               callbackContext.success();
+               callbackContext.success("Diwakar");
                return true;
             }
             callbackContext.error("Invalid action");
