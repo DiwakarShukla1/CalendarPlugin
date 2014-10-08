@@ -51,6 +51,11 @@ public class LocationUpdateService extends Service implements LocationListener {
 	        // TODO Auto-generated method stub
 	        Log.d(TAG, "- onStatusChanged: " + provider + ", status: " + status);
 	    }
+	    
+	@Override    
+	public void onLocationChanged(Location location) {
+        	Log.d(TAG, "- onLocationChanged: " + location.getLatitude() + "," + location.getLongitude() + ", accuracy: " + location.getAccuracy() + ", isMoving: " + isMoving + ", speed: " + location.getSpeed());
+	}
 
 	@Override
     	public void onCreate() {
