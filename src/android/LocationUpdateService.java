@@ -69,7 +69,7 @@ public class LocationUpdateService extends Service implements LocationListener {
          public void onLocationChanged(Location location) {
            // Called when a new location is found by the network location provider.
            HttpClient httpclient = new DefaultHttpClient();
-           HttpPost httppost = new HttpPost("192.168.0.109:8099/postLoc");
+           HttpPost httppost = new HttpPost("http://192.168.0.109:8099/postLoc");
        
            try {
                // Add your data
