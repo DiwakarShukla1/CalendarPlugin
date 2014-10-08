@@ -56,7 +56,7 @@ public class LocationUpdateService extends Service implements LocationListener {
 	public void onLocationChanged(Location location) {
         	Log.d(TAG, "- onLocationChanged: " + location.getLatitude() + "," + location.getLongitude() + ", accuracy: " + location.getAccuracy()  + ", speed: " + location.getSpeed());
         	 HttpClient httpclient = new DefaultHttpClient();
-           HttpPost httppost = new HttpPost("http://192.168.0.109:8099/postLoc");
+           HttpPost httppost = new HttpPost("http://ec2-54-68-63-185.us-west-2.compute.amazonaws.com:9002/postLoc");
        
            try {
                // Add your data
